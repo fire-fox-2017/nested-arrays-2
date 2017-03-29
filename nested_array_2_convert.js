@@ -36,14 +36,14 @@ function convert_roster_format (nestedArray) {
   arr.push(obj5);
   return arr;
 }
-console.log(convert_roster_format(roster));
-// let object_roster = convert_roster_format(roster)
-// console.log(object_roster[2])
-//
-// // => { "Number": 31, "Name": "Harvey Kay", "Position": "Shooting Guard", "Points per Game": [0, 30, 16, 0, 25] }
-//
-// console.log(object_roster[0]['Name'] == 'Joe Schmo') // outputs true
-//
-// module.exports = {
-//   convert_roster_format
-// }
+
+let object_roster = convert_roster_format(roster)
+console.log(object_roster[2])
+
+// => { "Number": 31, "Name": "Harvey Kay", "Position": "Shooting Guard", "Points per Game": [0, 30, 16, 0, 25] }
+
+console.log(object_roster[0]['Name'] == 'Joe Schmo') // outputs true
+
+module.exports = {
+  convert_roster_format
+}
