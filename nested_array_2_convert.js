@@ -13,10 +13,19 @@ let roster = [
 
 function convert_roster_format (nestedArray) {
   // your convert code here
+  let result = [];
+  for(let i = 1; i < nestedArray.length; i++) {
+    let object = {};
+    for(let j = 0; j < nestedArray[0].length; j++) {
+      object[nestedArray[0][j]] = nestedArray[i][j];
+    }
+    result.push(object);
+  }
+  return result;
 }
 
 let object_roster = convert_roster_format(roster)
-console.log(object_roster[2])
+console.log(object_roster[2]);
 
 // => { "Number": 31, "Name": "Harvey Kay", "Position": "Shooting Guard", "Points per Game": [0, 30, 16, 0, 25] }
 
