@@ -1,9 +1,9 @@
 'use strict'
 
 let roster = [
-  ['Number', 'Name', 'Position', 'Points per Game'],
-  [12, 'Joe Schmo', 'Center', [14, 32, 7, 0, 23] ],
-  [9, 'Ms. Buckets', 'Point Guard', [19, 0, 11, 22, 0] ],
+  ['Number', 'Name', 'Position',       'Points per Game'],
+  [12, 'Joe Schmo', 'Center',          [14, 32, 7, 0, 23] ],
+  [9, 'Ms. Buckets', 'Point Guard',    [19, 0, 11, 22, 0] ],
   [31, 'Harvey Kay', 'Shooting Guard', [0, 30, 16, 0, 25] ],
   [7, 'Sally Talls', 'Power Forward ', [18, 29, 26, 31, 19] ],
   [22, 'MK DiBoux ', 'Small Forward ', [11, 0, 23, 17, 0] ]
@@ -13,6 +13,19 @@ let roster = [
 
 function convert_roster_format (nestedArray) {
   // your convert code here
+  let tampungData = [];
+  for (let i = 1; i < nestedArray.length; i++) {
+        let objectBaru = new Object();
+            for (let j = 0; j < nestedArray[i].length; j++) {
+              objectBaru[nestedArray[0][j]] = nestedArray[i][j];
+        	  }
+        tampungData.push(objectBaru);
+        //console.log(objectBaru);
+
+  }
+  //console.log(tampungData);
+  return tampungData;
+
 }
 
 let object_roster = convert_roster_format(roster)
