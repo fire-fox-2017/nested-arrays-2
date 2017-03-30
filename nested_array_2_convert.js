@@ -13,27 +13,16 @@ let roster = [
 
 function convert_roster_format (nestedArray) {
   var arr=[];
-  var obj1={};
-  var obj2={};
-  var obj3={};
-  var obj4={};
-  var obj5={};
-  for (var i=0; i<roster[0].length; i++){
+
+  for (var i=1; i<roster.length; i++){
+    var obj={};
     for (var k=0; k<roster[1].length; k++){
-      if(i===k){
-        obj1[roster[0][i]]= roster[1][k];
-        obj2[roster[0][i]]= roster[2][k];
-        obj3[roster[0][i]]= roster[3][k];
-        obj4[roster[0][i]]= roster[4][k];
-        obj5[roster[0][i]]= roster[5][k];
-      }
+        obj[roster[0][k]]= roster[i][k];
     }
+    arr.push(obj);
   }
-  arr.push(obj1);
-  arr.push(obj2);
-  arr.push(obj3);
-  arr.push(obj4);
-  arr.push(obj5);
+
+
   return arr;
 }
 

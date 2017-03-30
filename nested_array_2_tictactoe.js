@@ -1,9 +1,9 @@
+function randomNumber(){
+  var ran = Math.floor(Math.random()*2)+1;
+  return ran;
+}
 function tic_tac_toe_board () {
   var arr=[];
-  function randomNumber(){
-    var ran = Math.floor(Math.random()*2)+1;
-    return ran;
-  }
   var x=0;
   var o=0;
   for (var i=0; i<3; i++){
