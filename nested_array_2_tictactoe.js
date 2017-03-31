@@ -5,7 +5,7 @@ function tic_tac_toe_board () {
   for(let i=0;i<3;i++){
     var arrTemp=[];
   //  for(let j=0;j<3;j++){
-  let j=0;
+  //let j=0;
   do{
       let acak=Math.floor((Math.random() * 2) + 1);
       if(acak%2==0&&max1<=4){
@@ -15,11 +15,12 @@ function tic_tac_toe_board () {
         arrTemp.push("O");
         max2++;
       }
-      j++
+    //  j++
     }while (arrTemp.length<3) ;
     //}
     arr.push(arrTemp);
   }
+
   return arr;
 }
 
